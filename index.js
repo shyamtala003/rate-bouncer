@@ -2,7 +2,7 @@
 const requestStore = {};
 
 // Middleware Function
-export default function rateLimiter({ duration, maxRequests }) {
+function rateLimiter({ duration, maxRequests }) {
   return (req, res, next) => {
     const currentTime = Date.now();
     const windowStartTime = currentTime - duration;
