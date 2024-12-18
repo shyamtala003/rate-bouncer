@@ -1,6 +1,6 @@
 {
   "name": "rate-bouncer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight and flexible rate-limiting middleware for Node.js, designed to limit the number of requests to your API endpoints, prevent abuse, and protect your application from traffic spikes.",
   "main": "index.js",
   "scripts": {
