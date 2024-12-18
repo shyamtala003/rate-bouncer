@@ -1,0 +1,33 @@
+{
+  "name": "rate-bouncer",
+  "version": "1.0.1",
+  "description": "A lightweight and flexible rate-limiting middleware for Node.js, designed to limit the number of requests to your API endpoints, prevent abuse, and protect your application from traffic spikes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rate limiter",
+    "rate limiting middleware",
+    "API rate limiting",
+    "request throttling",
+    "express rate limiter",
+    "Node.js rate limiter",
+    "API protection",
+    "throttling middleware",
+    "request limit",
+    "rate limit protection",
+    "Express.js rate limiter",
+    "rate limit API",
+    "in-memory rate limiter",
+    "rate limiting express",
+    "API abuse prevention",
+    "scalable rate limiting",
+    "node.js request limiter",
+    "API traffic control",
+    "DoS protection",
+    "node middleware"
+  ],
+  "author": "Shyam Tala",
+  "license": "MIT"
+}
