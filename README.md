@@ -1,4 +1,4 @@
-# Rate-Limit (Node.js Rate Limiting Middleware)
+# rate-bouncer (Node.js Rate Limiting Middleware)
 
 A lightweight and flexible rate-limiting middleware for Node.js, designed to limit the number of requests to your API endpoints, prevent abuse, and protect your application from traffic spikes.
 
@@ -25,7 +25,7 @@ Below is a basic example of how to use this rate-limiting middleware in an Expre
 
 ```js
 const express = require("express");
-const rateLimiter = require("rate-limit"); // Import the rate-limiting middleware
+const rateLimiter = require("rate-bouncer"); // Import the rate-bouncer middleware
 
 const app = express();
 
