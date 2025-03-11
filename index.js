@@ -4,7 +4,7 @@ const { default: isTerminalRequest } = require("./utils/isTerminalRequest");
 
 const requestStore = new Map();
 
-function rateLimiter({ duration = 10 * 1000, maxRequests = 5 }) {
+function rateLimiter({ duration = 10 * 1000, maxRequests = 5 } = {}) {
   return (req, res, next) => {
     const currentTime = Date.now();
     const windowStartTime = currentTime - duration;
@@ -57,4 +57,27 @@ function rateLimiter({ duration = 10 * 1000, maxRequests = 5 }) {
   };
 }
 
-module.exports = rateLimiter;
+// Cleanup function to free memory
+function cleanupMemory() {
+  const currentTime = Date.now();
+
+  requestStore.forEach((timestamps, key) => {
+    // Remove old timestamps from each key
+    requestStore.set(
+      key,
+      timestamps.filter((timestamp) => timestamp > currentTime - 60000)
+    );
+
+    // If all timestamps are expired, delete the key
+    if (requestStore.get(key).length === 0) {
+      requestStore.delete(key);
+    }
+  });
+}
+
+// Function to start memory cleanup based on user-defined interval
+function startCleanup({ interval = 10000 }) {
+  setInterval(cleanupMemory, interval);
+}
+
+module.exports = { rateLimiter, startCleanup };
