@@ -3,8 +3,20 @@
   "version": "1.0.4",
   "description": "A lightweight and flexible rate-limiting middleware for Node.js, designed to limit the number of requests to your API endpoints, prevent abuse, and protect your application from traffic spikes.",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "utils/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyamtala003/rate-bouncer"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
   },
   "keywords": [
     "rate limiter",
@@ -28,6 +40,6 @@
     "DoS protection",
     "node middleware"
   ],
-  "author": "Shyam Tala",
+  "author": "Shyam Tala (https://github.com/shyamtala003)",
   "license": "MIT"
 }
